@@ -1,28 +1,39 @@
 import styled from 'styled-components';
-
-// Colors
-
-export const white = 'white';
-export const colorPrimary = '#4C4C6D';
-export const colorSecondary = '#ffe194';
-export const colorBackgroundLight = '#E8F6EF';
-export const colorBackgroundDarker = '#B8DFD8';
+import {
+	white,
+	colorPrimary,
+	colorSecondary,
+	colorBackgroundLight,
+	colorBackgroundDarker,
+} from '../UI/colors';
 
 // Layout (styled components)
 
+// Page
+
 export const FormPage = styled.div`
 	width: auto;
-	heigth: 100%;
-	margin: 2rem 20%;
+	height: 100%;
+	margin: 0 20%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 `;
 
+export const PageContent = styled.div`
+	width: 50rem;
+	display: flex;
+	flex-flow: nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+`;
+
+// Header
+
 export const Header = styled.header`
-	width: 600px;
-	heigth: 400px;
+	width: 50rem;
+	height: 6rem;
 	background-color: ${white};
 	display: flex;
 	justify-content: center;
@@ -31,14 +42,17 @@ export const Header = styled.header`
 `;
 
 export const HeaderTitle = styled.h1`
+	font-size: 1.8rem;
 	color: ${colorPrimary};
 `;
 
+// Todo section
+
 export const TodoSection = styled.section`
-	width: 600px;
-	heigth: 400px;
+	width: 30rem;
+	height: auto;
+	margin-top: 2rem;
 	background-color: ${white};
-	border-bottom: 2px solid ${colorBackgroundLight};
 `;
 
 export const TaskForm = styled.form``;
@@ -81,13 +95,25 @@ export const ButtonSubmit = styled.button`
 
 export const TaskList = styled.div``;
 
-export const GraphSection = styled.section`
-	width: 600px;
-	heigth: 400px;
-	background-color: ${white};
+// Graph (dynamic components are within TodoPage component)
+
+export const GraphContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+`;
+
+export const GraphText = styled.span`
+	font-size: 0.8rem;
+	align-self: center;
+	margin-top: 1rem;
+`;
+
+export const GraphAxisText = styled.span`
+	font-size: 0.6rem;
+	align-self: center;
 `;
 
 export const Footer = styled.footer`
-	width: 600px;
-	heigth: 400px;
+	width: 50rem;
+	height: 400px;
 `;

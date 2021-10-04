@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 //  Components
 import { ButtonSubmit } from '../pages/todoPageLayout';
-
 const TaskContainer = styled.div`
 	width: 400px;
 	heigth: 2rem;
