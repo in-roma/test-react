@@ -1,6 +1,6 @@
 export const white = 'white';
 export const black = 'black';
-export const colorPrimary = '#4C4C6D';
-export const colorSecondary = '#ffe194';
-export const colorBackgroundLight = '#E8F6EF';
-export const colorBackgroundDarker = '#B8DFD8';
+export const colorPrimary = '#1A66A6';
+export const colorSecondary = '#F39730';
+export const colorBackgroundLight = '#F6F7F6';
+export const colorBackgroundDarker = '#1A66A6';

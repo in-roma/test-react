@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import styled from 'styled-components';
 
@@ -6,14 +6,7 @@ import styled from 'styled-components';
 import Task from '../components/Task';
 
 // Colors
-import {
-	white,
-	black,
-	colorPrimary,
-	colorSecondary,
-	colorBackgroundLight,
-	colorBackgroundDarker,
-} from '../UI/colors';
+import { white, black, colorPrimary, colorSecondary } from '../UI/colors';
 
 // Styled components
 import {
@@ -62,7 +55,7 @@ export default function TodoPage() {
 	};
 
 	// Change status
-	const changeTaskStatus = (index) => (event) => {
+	const changeTaskStatus = (index) => () => {
 		let newList = [...tasks];
 		let status = tasks[index].status;
 
@@ -113,13 +106,17 @@ export default function TodoPage() {
 	const GraphUndone = styled.div`
 		width: 8rem;
 		height: ${(maxHeight / tasks.length) * unDoneTasksGraph}rem;
-		background-color:${colorBackgroundDarker}};
+		background-color:${colorSecondary}};
+		border-top-left-radius: 0.2rem;
+		border-top-right-radius: 0.2rem;
 	`;
 
 	const Graphdone = styled.div`
 		width: 8rem;
 		height: ${(maxHeight / tasks.length) * doneTasksGraph}rem;
-		background-color: ${colorBackgroundDarker};
+		background-color: ${colorPrimary};
+		border-top-left-radius: 0.2rem;
+		border-top-right-radius: 0.2rem;
 	`;
 	console.log('this is unDoneTasksGraph', unDoneTasksGraph);
 	console.log('this is doneTasksGraph', doneTasksGraph);
@@ -127,12 +124,12 @@ export default function TodoPage() {
 	return (
 		<FormPage>
 			<Header>
-				<HeaderTitle>TODO APP - TEST OOTI</HeaderTitle>
+				<HeaderTitle>TODO APP</HeaderTitle>
 			</Header>
 			<PageContent>
 				<TodoSection>
 					<TaskForm onSubmit={addTask}>
-						<TaskFormLabel>Task:</TaskFormLabel>
+						<TaskFormLabel>TASK:</TaskFormLabel>
 						<TaskFormInput
 							onChange={onChange}
 							type="text"
@@ -150,6 +147,7 @@ export default function TodoPage() {
 								status={el.status}
 								deleteTask={deleteTask}
 								changeTaskStatus={changeTaskStatus(index)}
+								maxLength={11}
 							/>
 						))}
 					</TaskList>
