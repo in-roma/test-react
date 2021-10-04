@@ -21,7 +21,7 @@ export const FormPage = styled.div`
 `;
 
 export const Header = styled.header`
-	width: 800px;
+	width: 600px;
 	heigth: 400px;
 	background-color: ${white};
 	display: flex;
@@ -35,7 +35,7 @@ export const HeaderTitle = styled.h1`
 `;
 
 export const TodoSection = styled.section`
-	width: 800px;
+	width: 600px;
 	heigth: 400px;
 	background-color: ${white};
 	border-bottom: 2px solid ${colorBackgroundLight};
@@ -79,15 +79,15 @@ export const ButtonSubmit = styled.button`
 	}
 `;
 
-export const TaskForm = styled.div``;
+export const TaskList = styled.div``;
 
 export const GraphSection = styled.section`
-	width: 800px;
+	width: 600px;
 	heigth: 400px;
 	background-color: ${white};
 `;
 
 export const Footer = styled.footer`
-	width: 800px;
+	width: 600px;
 	heigth: 400px;
 `;
