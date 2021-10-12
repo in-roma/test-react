@@ -69,6 +69,7 @@ export default function TodoPage() {
 
 		let newTaskList = tasks.filter((el) => el.id !== id);
 		setTasks(newTaskList);
+		
 	};
 
 	// Saving todo tasks to local storage
